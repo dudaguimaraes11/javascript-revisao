@@ -22,7 +22,7 @@ console.log (`🗡 Defesa Base: ${DEFESA_BASE}`);
 
 // 3. APLICAÇÃO DE OPERADORES DE ATRIBUIÇÃO
 
-xp += 150; // O personagem treinou e ganhou pontos de experiência.
+//xp += 150; // O personagem treinou e ganhou pontos de experiência.
 ouro -= 30; // Comprou poção por 30 moedas de ouro. 
 vida += 40; // Usou a poção e recuperou pontos de vida.  
 danoBase *= 2 // A arma foi encantada e seu dano foi dobrado.  
@@ -81,6 +81,7 @@ let vidaAtual = 140;
 let vidaMaxima = 200;
 let manaAtual = 50;
 let manaMaxima = 50;
+let energia = 100; 
 
 // Novos atributos para batalha
 let forca = 20;
@@ -102,12 +103,43 @@ console.log (`🌟 CAPÍTULO I: Ao se embrenhar na misteriosa floresta de Mystic
 
 let matarBesta = true 
 if (matarBesta) {
-    xp +=200 
+    xp +=100; 
     console.log (`Em golpes ágeis, Ártemis matou as três bestas e agora, com a recente adição de 200xp, acumulava um total de ${xp} xp.`);
 }
 
 let descansar = true 
 if (descansar) {
-    vida += 10 
+    vida += 20
+    if (vida > vidaMaxima) vida = vidaMaxima; 
     console.log (`Tendo cumprido sua missão diária, pôde parar para descansar na sombra de um grande carvalho e recuperar sua vida, que agora estava em ${vida}.`);
 }
+
+// Capítulo II
+console.log (`🌟 CAPÍTULO II: Ao amanhecer do segundo dia de sua missão, ${nome} se levantou com os músculos ainda tenso, mas revitalizada. A noite fora tranquila e ela esperava que o dia que se seguisse revelasse grandes vitórias. Ao arrumar seus itens, a caçadora partiu para mais um dia de aventura. Após uma longa caminhada entre raíses e folhas úmidas, ${nome} se deparou com um dos piores destinos da floresta encantada: a Encruzilhada dos Lamentos. As lendas, mitos e boatos que ouvira sobre os três caminhos que estendiam-se a sua frente fizeram-na estremecer. Mas uma escolha tinha que ser feita, pois não restava alternativa.`);
+
+if (classe === "Guerreira") {
+    console.log(" O poder de seus antepassados, os mais poderosos guerreiros, flui através de suas veias incentivando-a a honrá-los. Com coragem no coração e mente aberta, ela seguiu em direção ao seu destino, confiante de que o legado de sua linhagem a guiaria.");
+}
+
+if (xp >= 100) {
+console.log(`A experiência adquirida em seus ${combatesVencidos} combates anteriores revelou-se valiosa. Procurando rapidamente por sinais que a instruissem sobre o caminho correto, ela os encontrou. Sinais de proteção das dríades da natureza marcados nas árvores da primeira trilha.`); 
+nivel++; 
+xp += 100; 
+vida =  vidaMaxima; 
+console.log (`Ela subiu para o próximo nível (nível ${nivel}).`)
+
+} else {
+    console.log (`${nome} ainda não havia experiência o sufiente para tomar essa decisão. No entanto, seguiu pelo caminho do meio e deparou-se com um nevoeiro mágico que a desorientou. ${nome} perdeu vida e energia.`);
+    vida -=30; 
+    energia -=40; 
+}
+
+let encontrouAliado = true; 
+
+if (encontrouAliado) {
+    console.log (`Após inúmeras horas caminhando, ${nome} chegou a uma clareira. Saindo das sombras, o Ansião Andarilho, conhecido no reino como Ledgher ofereceu a guerreira uma poção de advertência sobre os perigos que se seguiriam à frente. Hesitou em aceitar. Mas, seguindo o seu coração, tomou a poção. Ganhou 50xp. Satisfeita, seguiu seu caminho.`);
+    xp+=50; 
+} else {
+    console.log (`A heroina seguiu seu caminho pela floresta úmida e escura confiando em seus instintos, acreditando que logo chegaria à reposta que salvaria o reino.`)
+}
+
