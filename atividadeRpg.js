@@ -137,9 +137,40 @@ console.log (`Ela subiu para o próximo nível (nível ${nivel}).`)
 let encontrouAliado = true; 
 
 if (encontrouAliado) {
-    console.log (`Após inúmeras horas caminhando, ${nome} chegou a uma clareira. Saindo das sombras, o Ansião Andarilho, conhecido no reino como Ledgher ofereceu a guerreira uma poção de advertência sobre os perigos que se seguiriam à frente. Hesitou em aceitar. Mas, seguindo o seu coração, tomou a poção. Ganhou 50xp. Satisfeita, seguiu seu caminho.`);
+    console.log (`Após inúmeras horas caminhando, ${nome} chegou a uma clareira. Saindo das sombras, o Ansião Andarilho, conhecido no reino como Ledgher ofereceu a guerreira uma poção de advertência sobre os perigos que se seguiriam à frente. Hesitou em aceitar. Mas, seguindo o seu coração, tomou a poção. Ganhou 50xp. Em seguida, o Ansião entregou-lhe uma chava. Mesmo sem entender, ${nome} confiou e seguiu seu caminho.`);
     xp+=50; 
 } else {
     console.log (`A heroina seguiu seu caminho pela floresta úmida e escura confiando em seus instintos, acreditando que logo chegaria à reposta que salvaria o reino.`)
+}
+
+// CAPÍTULO III 
+let repostaEnigma = "tempo"; 
+let temChave = true; 
+let famaEntrePovos = 7;
+let inimigosPerseguindo = false; 
+
+console.log (`🌟 CAPÍTULO III: Ártemis, chegando diante do antigo templo da Ordem de Arkenfell, agora corrompido pelas sombras estava sob domínio de Malakar, o Ansião do Mal e seus comensais. O portão sagrado estava selado por uma magia poderosa que somente uma chave encantada poderia abrir. `)
+
+if (!temChave) {
+    console.log (`Sem a chave em mãos, Ártemis era incapaz de atravessar o portal mágico. O mal continuaria a crescer e sua confiança diminuia a cada segundo. `);
+} else {
+    console.log (` ${nome}, pensando que não poderia ser conhecidência, lembrou-se da chave que o Ansião Andarilho havia lhe entregado na clareira. Utilizando a chave, ela foi recebida por um brilho intenso. Ela entrou no templo determinada a cumprir sua missão.`);
+}
+
+console.log (`No coração do antigo santuário, a batalha foi intensa. Ártemis, apesar de poderosa, não conseguiria vencer a batalha contra tantos comensais e o poderoso Malakar sozinha.`); 
+
+if (famaEntrePovos >= 7) {
+    console.log (`Subitamente, de todas as direções, guerreiros fiéis aos Poderes da Natureza que protegiam as terras próximas sentiram a luz cirada por ${nome} e se juntaram a ela na batalha. Com corações puros e armas afiadas, expulsaram todas as sombras do mal que lá habivam, restaurando a antiga Ordem de Arkenfell.`);
+    xp+= 100; 
+    nivel++;
+} else if (famaEntrePovos >=5 && !inimigosPerseguindo) {
+    console.log (`Subitamente, apesar de cautelosos, guerreiros que protegiam as terras próximas notaram o brilho intenso e seguiram seu caminho. Encontraram Ártemis e sentindo sua aura pura, perceberam que deviam ajudá-la.`);
+    xp+= 50; 
+} else if (famaEntrePovos <6 && inimigosPerseguindo) {
+    console.log (`Com inimigos perseguindo-a e o brilho intenso indicando seu caminho, ${nome} foi encontrada e atingida por uma lança. Rapidamente correndo e escondendo-se, conseguiu escapar, mas falhou em sua missão.`);
+    vida -=30; 
+} else {
+    console.log (`Exausta, não notando que tinha a chave em mãos e cercada de inimigos à espreita, Ártemis desistiu e durante a noite foi atacada por seus inimigos. Não percebeu que ainda havia esperança e que estava diante da vitória. Fracassou em sua missão.`); 
+    vida -= 50; 
 }
 
