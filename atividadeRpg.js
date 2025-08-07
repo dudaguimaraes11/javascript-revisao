@@ -174,3 +174,8 @@ if (famaEntrePovos >= 7) {
     vida -= 50; 
 }
 
+// PRÓLOGO 
+
+console.log (`🌟 PRÓLOGO: Com a queda das sombras lideradas pelo Ansião Malakar e a restauração de Arkenfell, uma nova era começava em seu reino. A escuridão que uma vez assolou os cidadãos de Thalendor havia sido substituída pela luz.`); 
+console.log (`${nome}, agora reconhecida pelo rei como heroina do reino, sabia que sua história não havia chegado ao fim. Era seu destino proteger o reino de todos os males. Enquanto as bandeiras de Thalendor tremulavam ao suave vento, ${nome} sentia que a natureza logo lhe traria outra missão, pois sua intuição a avisava de uma nova ameaça que começava a se formar entre as sombras. Será que o mal realmente tinha sido exterminado? `);
+console.log (`Mas por enquanto só restava aos cidadãos aproveitarem a paz enquanto Arkenfell era restituído. A heroína teria seu merecido descanso. Olhando para o horizonte com esperança, ${nome} cochilou sob a sombra de um carvalho.`); 
