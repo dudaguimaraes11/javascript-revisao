@@ -212,3 +212,22 @@ console.log (`🚩 Oh, oh! Armadilhas encontradas:${armadilhas.join(",")}`);
 inventario.splice(inventario.indexOf("Pedra da Lua"), 1);
 console.log (`⚡ Oh, não! Um item foi perdido: ${inventario[0]}`);
 
+// CAPÍTULO II 
+console.log(`🌟 CAPÍTULO V: Explorando as salas do castelo: ${salasDoCastelo.length}. ${nome} e seus ${aliados.length} aliados decidiram se dividir para explorar cada uma das salas.`) 
+
+for (let i = 0; i < salasDoCastelo.length; i++) {
+console.log("🚪 Sala " + (i + 1) + ": " + salasDoCastelo[i]);
+
+// Lógica diferente para cada sala baseada no índice
+if (i === 0) {
+console.log(`📖 Ao explorar a primeira sala, a ${salasDoCastelo[0]}, ${nome} encontrou um antigo grimório. Ganhou experiência.`);
+xp += 100;
+} else if (i === 1) {
+console.log(`🎇 O aliado ${aliados[4]} seguiu por um dos corredores escuros do castelo e descobriu um${salasDoCastelo[1]}. Com o choque, deixou cair a ${inventario[1]} que empunhava, mas ganhou experiência.`);
+inventario.push ("Espada Encantada");
+xp += 70; 
+} else {
+console.log(`💣 Para os outros aliados, o ar ficou denso e pesado. Uma magia corrupta os assombrou e o tempo passou devagar enquanto a luz se esvaia do castelo.`);
+vida -= 50;     
+}
+}; 
