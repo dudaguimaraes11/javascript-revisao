@@ -307,3 +307,7 @@ for (let i = 0; i < inimigos.length; i++) {
 }
 
 console.log (`🥇 Fim da batalha: ${xp} XP | ${vida} de vida | Inventário: ${inventario}. | Poções: ${pocoesEncontradas}`); 
+
+// PRÓLOGO
+console.log (`🌟 PRÓLOGO ÉPICO: Das ruinas do castelo, surgiu ${aliados[4]}, empunhando o Coração de Éter. Ao lado de ${nome}, o ${aliados[6]}, voa triunfantemente em direção ao Castelo de Thalendor.`); 
+console.log (`🏰 A rainha concede títulos de cavalheiro a todos os aliados: ${aliados.join(",")}. A luz retorna ao reino, e ${nome} finalmente desfruta da paz.`);
