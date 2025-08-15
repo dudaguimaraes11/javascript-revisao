@@ -1,4 +1,3 @@
-
 // 1. CRIAÇÃO DAS VARIÁVEIS PRINCIPAIS
 
 let nome = "Ártemis"; 
@@ -179,3 +178,37 @@ if (famaEntrePovos >= 7) {
 console.log (`🌟 PRÓLOGO: Com a queda das sombras lideradas pelo Ansião Malakar e a restauração de Arkenfell, uma nova era começava em seu reino. A escuridão que uma vez assolou os cidadãos de Thalendor havia sido substituída pela luz.`); 
 console.log (`${nome}, agora reconhecida pelo rei como heroina do reino, sabia que sua história não havia chegado ao fim. Era seu destino proteger o reino de todos os males. Enquanto as bandeiras de Thalendor tremulavam ao suave vento, ${nome} sentia que a natureza logo lhe traria outra missão, pois sua intuição a avisava de uma nova ameaça que começava a se formar entre as sombras. Será que o mal realmente tinha sido exterminado? `);
 console.log (`Mas por enquanto só restava aos cidadãos aproveitarem a paz enquanto Arkenfell era restituído. A heroína teria seu merecido descanso. Olhando para o horizonte com esperança, ${nome} cochilou sob a sombra de um carvalho.`); 
+
+// NOVOS ELEMENTOS PARA O CASTELO DOS ARRAYS - CONTINUIDADE ÉPICA 
+
+// Inventário, aliados, inimigos e salas
+let inventario = ["Pedra da Lua", "Espada Encantada", "Chave dourada", "Pena do Ancião", "Armadura de Fogo", "Poção da Sorte", "Poção da Vida", "Arco da Lua Cristalina", "Manto da Caçadora"]; 
+let aliados = ["Ancião Andarilho", "Arqueiro Félix", "Guerreira Ophélia", "Fada dos Campos Floridos", "Guerreiro Estevão", "Rainha de Thalendor"]; 
+let inimigos = ["Rei das Trevas", "Comensal Líder das Sombras", "Tropa de comensais", "Espírito Sombrio", "Sombras da Morte", "O Vulto Sem rosto", "Devorador de Almas", "Senhor do Abismo", "Fantasma do Calabouço"]; 
+let salasDoCastelo = ["Portal Secreto", "Biblioteca Mágica", "Torres Místicas", "Calabouço das Trevas", "Sala das Sombras", "Sala das Poções"]; 
+
+console.log(`🏰 === ${nome} adentra ao Castelo dos Arrays ===`);
+console.log(`Após as vitórias dos níveis anteriores, a heroina chega ao castelo lendário para uma nova missão...`);
+console.log(`Inventário inicial: ${inventario}`);
+
+// CAPÍTULO I
+
+console.log (`🌟 CAPÍTULO IV: Ao receber uma nova missão da Rainha de Thalendor semanas após o desfecho da Batalha de Arkenfell, ${nome} sentiu-se útil para o reino novamente. Próximo ao Vilarejo das Hárpias havia um castelo e ela deveria explorá-lo, pois aquele era um local suspeito de conter magia negra. Aterrorizada com a ideia da Ordem ser tomada novamente pelas sombras, a Rainha confiou a missão à mais brava das heroinas. A rainha lhe apresentou seu inventário incial:`);
+console.log (`${inventario}`);
+console.log (`🧚🏻‍♀️ Juntos à Ártemis, os aliados ${aliados.join(",")} adentraram ao castelo.`)
+
+let pocoesEncontradas = [];
+let armadilhas = []; 
+
+console.log (`Ao passar pelas grandes portas do Castelo Abandonado, ${nome} quase caiu em uma armadilha, o Poço Sem Fim, mas conseguiu se equilibrar graças a ajuda ${aliados [2]}. Ao explorarem as salas mais misteriosas, como as ${salasDoCastelo[2]}, encontraram uma vasta quantidade de poções encantadas. Ártemis as incluiu em seu inventário. Ao longo da sua busca por itens sombrios, a guerreira perdeu sua preciosa protetora, ${inventario[0]}.`); 
+
+// Atualiza inventário de poções 
+armadilhas.push("Poço Sem Fim");
+pocoesEncontradas.push ("Poção Polissulco", "Elixir da Aurora", "Gota de Éter", "Elixir do Véu Místico", "Soro da Sombra", "Infusão do sol interior")
+console.log (`💖 Novas poções no inventário: ${pocoesEncontradas};`)
+console.log (`🚩 Oh, oh! Armadilhas encontradas:${armadilhas.join(",")}`); 
+
+// Remove item do inventário 
+inventario.splice(inventario.indexOf("Pedra da Lua"), 1);
+console.log (`⚡ Oh, não! Um item foi perdido: ${inventario[0]}`);
+
