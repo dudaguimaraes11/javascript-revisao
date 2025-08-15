@@ -173,7 +173,7 @@ if (famaEntrePovos >= 7) {
     vida -= 50; 
 }
 
-// PRÓLOGO 
+// EPÍLOGO 
 
 console.log (`🌟 PRÓLOGO: Com a queda das sombras lideradas pelo Ansião Malakar e a restauração de Arkenfell, uma nova era começava em seu reino. A escuridão que uma vez assolou os cidadãos de Thalendor havia sido substituída pela luz.`); 
 console.log (`${nome}, agora reconhecida pelo rei como heroina do reino, sabia que sua história não havia chegado ao fim. Era seu destino proteger o reino de todos os males. Enquanto as bandeiras de Thalendor tremulavam ao suave vento, ${nome} sentia que a natureza logo lhe traria outra missão, pois sua intuição a avisava de uma nova ameaça que começava a se formar entre as sombras. Será que o mal realmente tinha sido exterminado? `);
@@ -184,7 +184,7 @@ console.log (`Mas por enquanto só restava aos cidadãos aproveitarem a paz enqu
 // Inventário, aliados, inimigos e salas
 let inventario = ["Pedra da Lua", "Espada Encantada", "Chave dourada", "Pena do Ancião", "Armadura de Fogo", "Poção da Sorte", "Poção da Vida", "Arco da Lua Cristalina", "Manto da Caçadora"]; 
 let aliados = ["Ancião Andarilho", "Arqueiro Félix", "Guerreira Ophélia", "Fada dos Campos Floridos", "Guerreiro Estevão", "Rainha de Thalendor"]; 
-let inimigos = ["Rei das Trevas", "Comensal Líder das Sombras", "Tropa de comensais", "Espírito Sombrio", "Sombras da Morte", "O Vulto Sem rosto", "Devorador de Almas", "Senhor do Abismo", "Fantasma do Calabouço"]; 
+let inimigos = ["Rei das Trevas", "Comensal Líder das Sombras", "Tropa de comensais", "Espírito Sombrio", "Sombras da Morte", "Vulto Sem rosto", "Devorador de Almas", "Senhor do Abismo", "Fantasma do Calabouço"]; 
 let salasDoCastelo = ["Portal Secreto", "Biblioteca Mágica", "Torres Místicas", "Calabouço das Trevas", "Sala das Sombras", "Sala das Poções"]; 
 
 console.log(`🏰 === ${nome} adentra ao Castelo dos Arrays ===`);
@@ -213,7 +213,7 @@ inventario.splice(inventario.indexOf("Pedra da Lua"), 1);
 console.log (`⚡ Oh, não! Um item foi perdido: ${inventario[0]}`);
 
 // CAPÍTULO II 
-console.log(`🌟 CAPÍTULO V: Explorando as salas do castelo: ${salasDoCastelo.length}. ${nome} e seus ${aliados.length} aliados decidiram se dividir para explorar cada uma das salas.`) 
+console.log(`🌟 CAPÍTULO II: Explorando as salas do castelo: ${salasDoCastelo.join(",")}. ${nome} e seus ${aliados.length} aliados decidiram se dividir para explorar cada uma das salas.`) 
 
 for (let i = 0; i < salasDoCastelo.length; i++) {
 console.log("🚪 Sala " + (i + 1) + ": " + salasDoCastelo[i]);
@@ -223,7 +223,7 @@ if (i === 0) {
 console.log(`📖 Ao explorar a primeira sala, a ${salasDoCastelo[0]}, ${nome} encontrou um antigo grimório. Ganhou experiência.`);
 xp += 100;
 } else if (i === 1) {
-console.log(`🎇 O aliado ${aliados[4]} seguiu por um dos corredores escuros do castelo e descobriu um${salasDoCastelo[1]}. Com o choque, deixou cair a ${inventario[1]} que empunhava, mas ganhou experiência.`);
+console.log(`🎇 O aliado ${aliados[4]} seguiu por um dos corredores escuros do castelo e descobriu uma ${salasDoCastelo[1]}. Com o choque, deixou cair a ${inventario[1]} que empunhava, mas ganhou experiência.`);
 inventario.push ("Espada Encantada");
 xp += 70; 
 } else {
@@ -233,7 +233,7 @@ vida -= 50;
 }; 
 
 // CAPÍTULO III:
-console.log (`🌟CAPÍTULO VI: Com todos os aliados separados, a sombra se espalha rapidamente pelo castelo e uma força inesperada surge para ajudar.`); 
+console.log (`🌟CAPÍTULO III: Com todos os aliados separados, a sombra se espalha rapidamente pelo castelo e uma força inesperada surge para ajudar.`); 
  
 // O efeito das sombras cresce conforme os inimigos aparecem
 for (let i = 0; i < inimigos.length; i++) {
@@ -249,14 +249,14 @@ console.log (`☠ A energia do grupo é drenada em ${danoDasSombras} pontos. Mes
 for (let i = 0; i < inimigos.length; i++) {
     if (i === 2 && !aliados.includes ("Dragão Glittering")) {
     aliados.push ("Dragão Glittering");
-    console.log (`🐉 Das profundezas do ${salasDoCastelo[3]}, o poderoso Dragão Glittering, atraído pela bondade de ${nome} surge como reforço inesperado pelo grupo.`)
+    console.log (`🐉 Das profundezas do ${salasDoCastelo[3]}, o poderoso Dragão Glittering, atraído pela bondade de ${nome} surge como reforço inesperado para o grupo.`)
     xp += 30; 
     vida = vidaMaxima; 
     }
 }; 
 
 // CAPÍTULO IV 
-console.log (`🌟 CAPÍTULO VII: Com a nova adição aos aliados, o jogo virou. Assim, ${nome} reuniu os aliados para organizar novas estratégias e fortalecer a defesa antes da batalha decisiva`); 
+console.log (`🌟 CAPÍTULO IV: Com a nova adição aos aliados, o jogo virou. Assim, ${nome} reuniu os aliados para organizar novas estratégias e fortalecer a defesa antes da batalha decisiva.`); 
 
 for (let i = 0; i < aliados.length; i++) {
     console.log (`Aliado ${i + 1}: ${aliados[i]} se prepara para o combate, enfrentando o inimigo ${inimigos[i + 1]}.`)
@@ -284,7 +284,7 @@ inimigos.push("Zumbis Místicos");
 
 // CAPÍTULO V
 
-console.log (`🌟CAPÍTULO FINAL: A Batalha dos Castelos dos Arrays Começa!`);
+console.log (`🌟CAPÍTULO FINAL (V): A Batalha dos Castelos dos Arrays Começa!`);
 
 for (let i = 0; i < inimigos.length; i++) {
     if (i === 0) {
@@ -308,6 +308,6 @@ for (let i = 0; i < inimigos.length; i++) {
 
 console.log (`🥇 Fim da batalha: ${xp} XP | ${vida} de vida | Inventário: ${inventario}. | Poções: ${pocoesEncontradas}`); 
 
-// PRÓLOGO
-console.log (`🌟 PRÓLOGO ÉPICO: Das ruinas do castelo, surgiu ${aliados[4]}, empunhando o Coração de Éter. Ao lado de ${nome}, o ${aliados[6]}, voa triunfantemente em direção ao Castelo de Thalendor.`); 
+// EPÍLOGO
+console.log (`🌟 EPÍLOGO ÉPICO: Das ruinas do castelo, surgiu ${aliados[4]}, empunhando o Coração de Éter. Ao lado de ${nome}, o ${aliados[6]}, voa triunfantemente em direção ao Castelo de Thalendor.`); 
 console.log (`🏰 A rainha concede títulos de cavalheiro a todos os aliados: ${aliados.join(",")}. A luz retorna ao reino, e ${nome} finalmente desfruta da paz.`);
