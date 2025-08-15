@@ -231,3 +231,79 @@ console.log(`💣 Para os outros aliados, o ar ficou denso e pesado. Uma magia c
 vida -= 50;     
 }
 }; 
+
+// CAPÍTULO III:
+console.log (`🌟CAPÍTULO VI: Com todos os aliados separados, a sombra se espalha rapidamente pelo castelo e uma força inesperada surge para ajudar.`); 
+ 
+// O efeito das sombras cresce conforme os inimigos aparecem
+for (let i = 0; i < inimigos.length; i++) {
+    console.log (`🌑 Nas sombras, ${inimigos[i]} desafia ${aliados[i % aliados.length]} para lutar.`)
+}
+
+let danoDasSombras =  vidaMaxima/2; // dano progressivo
+vida -= danoDasSombras; 
+console.log (`☠ A energia do grupo é drenada em ${danoDasSombras} pontos. Mesmo com as vidas a ponto de colapsarem, os aliados não desistem.`); 
+
+
+// Adiciona aliado
+for (let i = 0; i < inimigos.length; i++) {
+    if (i === 2 && !aliados.includes ("Dragão Glittering")) {
+    aliados.push ("Dragão Glittering");
+    console.log (`🐉 Das profundezas do ${salasDoCastelo[3]}, o poderoso Dragão Glittering, atraído pela bondade de ${nome} surge como reforço inesperado pelo grupo.`)
+    xp += 30; 
+    vida = vidaMaxima; 
+    }
+}; 
+
+// CAPÍTULO IV 
+console.log (`🌟 CAPÍTULO VII: Com a nova adição aos aliados, o jogo virou. Assim, ${nome} reuniu os aliados para organizar novas estratégias e fortalecer a defesa antes da batalha decisiva`); 
+
+for (let i = 0; i < aliados.length; i++) {
+    console.log (`Aliado ${i + 1}: ${aliados[i]} se prepara para o combate, enfrentando o inimigo ${inimigos[i + 1]}.`)
+}
+
+// Calcular dano e efeitos conforme aliado e inimigo
+
+let danoRecebido = Math.floor(Math.random() * 15) + 10; 
+let danoCausado = Math.floor(Math.random() * 40) + 15; 
+let xpGanho =  Math.floor(Math.random() * 30) + 20; 
+let ouroGanho =  Math.floor(Math.random() * 50) + 5; 
+
+// Efeito especial para o Dragão Glittering 
+
+if (aliados.includes ("Dragão Glittering")) {
+    console.log (`⚡ O poder ancestral do Dragão, aprisionado por 500 anos na ${salasDoCastelo[2]}, e libertado por ${aliados[3]}, eleva o dano causado e reduz o dano recebido! Com a ajuda de Glittering, fica cada vez mais improvável a vitória do ${inimigos[0]} e suas tropas.`)
+    danoCausado += 20; 
+    danoRecebido = Math.floor(danoRecebido/2); 
+    xpGanho += 100; 
+}; 
+
+console.log (`💥Durante a batalha épica, ${nome} e ${aliados[2]} lutam juntas contra o ${inimigos[3]} e mandando-o para o ${salasDoCastelo[3]}, o aprizionaram para todo o sempre.`);
+console.log (`⚔ ${aliados[1]}, lutando sozinho contra recém descobertos Zumbis Místicos, recebeu um dano de ${danoRecebido}.`); 
+inimigos.push("Zumbis Místicos"); 
+
+// CAPÍTULO V
+
+console.log (`🌟CAPÍTULO FINAL: A Batalha dos Castelos dos Arrays Começa!`);
+
+for (let i = 0; i < inimigos.length; i++) {
+    if (i === 0) {
+        console.log (` 🎇 Das profundezas do ${salasDoCastelo[0]}, surge novamente ${aliados[4]}, empunhando o lendário Coração de Éter, capaz de dissipar toda a magia negra que envolve o castelo e seus enconderijos mais profundos.`); 
+        inventario.push ("Coração de Éter"); 
+        console.log (`💖 Novo item Mágico no Inventário: ${inventario[9]}`)
+        xp += 50; 
+    }
+    else if (i === 1) {
+        console.log (`🌑 As sombras ainda avançam contra os aliados, porém ${nome} permance firme. No entanto, a guerreira perde 100 pontos de vida.`); 
+        vidaMaxima -= 100; 
+    }
+    else if (i === inimigos.length - 1) {
+        console.log (`🔥 Em chamas intermináveis, o céu se incendeia. Das nuvens, o brilhante ${aliados[6]} inrrompe magnificamente, rugindo tão alto que as estruturas das muralhas são abaladas.`)
+        console.log (`💥 ${nome} e ${aliados[4]} unem suas forças, canalizando o poder do Coração de Éter para perfurar as escamas dos Inimigos das Trevas! Com um brilho extremo emanando do cajado ancestral, os aliados inferem um último golpe.`); 
+        console.log (`🏆 Com último golpe, os herois do reino de Thalendor exterminam as trevas do castelo para todo o sempre. Vitória épica alcançada.`);
+        vida = vidaMaxima; 
+        xp += 200; 
+    }
+}
+
+console.log (`🥇 Fim da batalha: ${xp} XP | ${vida} de vida | Inventário: ${inventario}. | Poções: ${pocoesEncontradas}`); 
